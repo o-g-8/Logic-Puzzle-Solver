@@ -1,26 +1,34 @@
-Fichier ayant pour indice 1 : Premier Puzzle logique
-Fichier ayant pour indice 2 : Deuxième Puzzle logique
-Fichier ayant pour indice 3 : Puzzle logique customisé
-Fichier ayant pour indice 4 : Puzzle Zèbre
 
-Premier puzzle logique : 
-    -executer avec "python3 main.py -a 5 -f 5 -d 5 -t 5"
-    
-Deuxième puzzle logique : 
-    -executer avec "python3 main2.py -m 5 -p 5 -ha 5 -pri 5"
+# Logic Puzzle Solver
 
-Puzzle logique customisé :
-    -executer avec "python3 main3.py"
+This project provides a set of Python scripts to solve various logic puzzles, including classic and custom challenges. Each puzzle is implemented in a separate file, and solutions are computed using constraint programming.
 
-Puzzle zebre :
-    -executer avec "python3 main4.py"
+## Available Puzzles
+
+- **Puzzle 1:** Classic logic puzzle (`main.py`)
+- **Puzzle 2:** Second logic puzzle (`main2.py`)
+- **Custom Puzzle:** User-defined logic puzzle (`main3.py`)
+- **Zebra Puzzle:** Famous Zebra puzzle (`main4.py`)
+
+## How to Run
+
+Use Python 3 to execute the scripts:
+
+- **Puzzle 1:**  
+    `python main.py -a 5 -f 5 -d 5 -t 5`
+- **Puzzle 2:**  
+    `python main2.py -m 5 -p 5 -ha 5 -pri 5`
+- **Custom Puzzle:**  
+    `python main3.py`
+- **Zebra Puzzle:**  
+    `python main4.py`
+
+Add the `-as` argument to display all possible solutions instead of just one.  
+Example: `python main4.py -as`
+
+## Notes
+
+- To remove clues and see their effect, comment out the `clue(model)` calls in the `solve()` function of the puzzle files.
+- When using `-as`, solutions are grouped by grid: all results for grid 1, then grid 2, and so on. Solution 1 of grid 1 matches solution 1 of grids 2 and 3, etc.
 
 
-Remarques :
-    -Ajouter l'argument "-as" à l'éxecution pour avoir toutes les solutions au lieu d'une seule. (ex : "python3 main4.py -as"
-    
-    -Dans la fonction "solve()" des fichiers "puzzle.py", vous pouvez mettre en commentaire les appels à la fonction "clue(model)" pour enlever les indices des puzzles afin de voir que ces fonctions affectent bien le résultat du solve.
-    
-    -Lorsqu'on ajoute l'argument "-as" à l'éxecution, les résultats seront affiché dans la console en commençant par toutes les résultats de la grille 1 puis 2 puis 3. La solution 1 de la grille 1 est en lien avec la solution 1 de la grille 2 et 3, etc
-    
-    
